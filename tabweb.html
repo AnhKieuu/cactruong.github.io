@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABC | XYZ</title>
+  <meta charshet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"  http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 14px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('sc1', this, 'red')">Đại học công nghiệp</button>
+<button class="tablink" onclick="openPage('sc2', this, 'green')" id="defaultOpen">Đại học kiến trúc</button>
+<button class="tablink" onclick="openPage('sc3', this, 'blue')">Đại học Hutech</button>
+<button class="tablink" onclick="openPage('sc4', this, 'orange')">Đại học FPT</button>
+<button class="tablink" onclick="openPage('sc5', this, 'pink')">Đại học thương mại</button>
+
+
+<div id="sc1" class="tabcontent">
+  <h3>Đại học công nghiệp</h3>
+  <p>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh là một trường đại học định hướng ứng dụng và thực hành, trực thuộc Bộ Công Thương, chuyên đào tạo nhóm ngành kinh tế công nghiệp và kỹ thuật công nghiệp, được thành lập từ ngày 24 tháng 12 năm 2004.</p>
+</div>
+
+<div id="sc2" class="tabcontent">
+  <h3>Đại học kiến trúc</h3>
+  <p>Trường Đại học Kiến trúc Thành phố Hồ Chí Minh là một trường đại học chuyên ngành với thế mạnh về đào tạo nhóm ngành xây dựng và thiết kế tại Việt Nam, thành viên của Bộ Xây dựng.</p> 
+</div>
+
+<div id="sc3" class="tabcontent">
+  <h3>Đại học Hutech</h3>
+  <p>Đại học Công nghệ Thành phố Hồ Chí Minh - HUTECH là một đại học tư thục. Trường chính thức chuyển từ loại hình dân lập sang tư thục theo quyết định số 702/QĐ – TTg của Thủ tướng Chính phủ kể từ ngày 19/05/2010.</p>
+</div>
+
+<div id="sc4" class="tabcontent">
+  <h3>Đại học FPT</h3>
+  <p>Trường Đại học FPT là một cơ sở kinh doanh dịch vụ giáo dục tại được thành lập ngày 8/9/2006 theo Quyết định số 208/2006/QĐ-TTg của Thủ tướng Chính phủ, do Tập đoàn FPT đầu tư 100% vốn, trở thành trường đại học đầu tiên do một doanh nghiệp thành lập tại Việt Nam.</p>
+</div>
+<div id="sc5" class="tabcontent">
+  <h3>Đại học thương mại</h3>
+  <p>12345</p>
+</div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+  
+</body>
+</html> 
